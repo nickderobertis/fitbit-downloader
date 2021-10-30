@@ -34,10 +34,15 @@ https://nickderobertis.github.io/fitbit-downloader/
 
 Run all commands in `pipenv shell`.
 
+### Download Sample Responses
+
+Run `python -m fitbit_downloader.download_samples` to output JSON files 
+with the responses.
+
 ### Generate Response Models
 
 Run `python -m fitbit_downloader.gen_models` to output response models 
-in `fitbit_downloader.models`.
+in `fitbit_downloader.models` from the sample responses.
 
 ## Author
 
