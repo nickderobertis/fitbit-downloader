@@ -4,7 +4,7 @@
 
 from __future__ import annotations
 
-from typing import List
+from typing import List, Optional
 
 from pydantic import BaseModel
 
@@ -43,7 +43,8 @@ class Stages(BaseModel):
 
 
 class Summary(BaseModel):
-    stages: Stages
+    # TODO: Set this to optional dynamically
+    stages: Optional[Stages]
     totalMinutesAsleep: int
     totalSleepRecords: int
     totalTimeInBed: int

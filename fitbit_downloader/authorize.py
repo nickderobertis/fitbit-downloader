@@ -24,7 +24,7 @@ def initial_client_authorization(config: Config):
 def set_authorization(config: Config, raw_token_data: dict[str, Any]):
     token_data = RefreshTokenResponse(**raw_token_data)
     _update_config_with_token_data(config, token_data)
-    logger.info(f"Token refreshed. New expiry: {config.oauth_config.expires_at_time}")
+    logger.info(f"Token refreshed. New expiry: {config.oauth_config.expires_at_time}")  # type: ignore
     config.save()
 
 
