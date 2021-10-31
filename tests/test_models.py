@@ -5,6 +5,7 @@ from pydantic import BaseModel
 
 from fitbit_downloader.models.elevationresponse import ElevationResponse
 from fitbit_downloader.models.heartresponse import HeartResponse
+from fitbit_downloader.models.refreshtokenresponse import RefreshTokenResponse
 from fitbit_downloader.models.sleepresponse import SleepResponse
 from fitbit_downloader.models.stepsresponse import StepsResponse
 from tests.config import INTRADAY_RESPONSES_FOLDER, RESPONSES_FOLDER
@@ -32,3 +33,8 @@ def test_steps_response():
 def test_sleep_response():
     json_path = RESPONSES_FOLDER / "sleep.json"
     _model_construction_test(json_path, SleepResponse)
+
+
+def test_refresh_token_response():
+    json_path = RESPONSES_FOLDER / "refresh-token.json"
+    _model_construction_test(json_path, RefreshTokenResponse)

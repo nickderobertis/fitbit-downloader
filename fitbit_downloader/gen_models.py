@@ -10,10 +10,17 @@ MODELS_FOLDER = Path(__file__).parent / "models"
 
 def generate_models():
     for path in _get_json_paths():
-        model_name = path.with_suffix("").name.title() + "Response"
+        model_name = _create_model_name(path)
         print(f"Generating model {model_name} from {path}")
         out_path = MODELS_FOLDER / f"{model_name.lower()}.py"
         _generate_model(path, out_path, model_name)
+
+
+def _create_model_name(path: Path) -> str:
+    base_name = path.with_suffix("").name
+    parts = base_name.split("-")
+    combined = "".join(part.title() for part in parts)
+    return f"{combined}Response"
 
 
 def _get_json_paths() -> Generator[Path, None, None]:

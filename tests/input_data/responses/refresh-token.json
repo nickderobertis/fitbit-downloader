@@ -1,0 +1,19 @@
+{
+  "access_token": "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyM0JNOFQiLCJzdWIiOiI5TjNHVlAiLCJpc3MiOiJGaXRiaXQiLCJ0eXAiOiJhY2Nlc3NfdG9rZW4iLCJzY29wZXMiOiJyc29jIHJhY3QgcnNldCBybG9jIHJ3ZWkgcmhyIHJudXQgcnBybyByc2xlIiwiZXhwIjoxNjM1NzE5NDk4LCJpYXQiOjE2MzU2OTA2OTh9.Wg5KVQ0GxHNGNYkLVpJm4PkCslg4FZAc56_kAmRTiLc",
+  "expires_in": 28800,
+  "refresh_token": "e98089054024642f4e3c23851126c3f927451bba4df39aa91367dbc591289266",
+  "scope": [
+    "sleep",
+    "social",
+    "nutrition",
+    "activity",
+    "heartrate",
+    "location",
+    "profile",
+    "weight",
+    "settings"
+  ],
+  "token_type": "Bearer",
+  "user_id": "9N3GVP",
+  "expires_at": 1635719498.3556807
+}
