@@ -1,0 +1,103 @@
+{
+  "activities": [
+    {
+      "activityId": 2050,
+      "activityParentId": 2050,
+      "activityParentName": "Weights",
+      "calories": 201,
+      "description": "",
+      "duration": 2700000,
+      "hasActiveZoneMinutes": true,
+      "hasStartTime": true,
+      "isFavorite": false,
+      "lastModified": "2021-10-31T17:21:24.571Z",
+      "logId": 43891083715,
+      "name": "Weights",
+      "startDate": "2021-10-31",
+      "startTime": "09:00",
+      "steps": 1040
+    }
+  ],
+  "goals": {
+    "activeMinutes": 30,
+    "caloriesOut": 2993,
+    "distance": 5,
+    "floors": 10,
+    "steps": 10000
+  },
+  "summary": {
+    "activeScore": -1,
+    "activityCalories": 1179,
+    "caloriesBMR": 1091,
+    "caloriesOut": 2047,
+    "distances": [
+      {
+        "activity": "total",
+        "distance": 3.28
+      },
+      {
+        "activity": "tracker",
+        "distance": 3.28
+      },
+      {
+        "activity": "loggedActivities",
+        "distance": 0
+      },
+      {
+        "activity": "veryActive",
+        "distance": 0.04
+      },
+      {
+        "activity": "moderatelyActive",
+        "distance": 0.97
+      },
+      {
+        "activity": "lightlyActive",
+        "distance": 2.26
+      },
+      {
+        "activity": "sedentaryActive",
+        "distance": 0
+      }
+    ],
+    "elevation": 100,
+    "fairlyActiveMinutes": 61,
+    "floors": 10,
+    "heartRateZones": [
+      {
+        "caloriesOut": 1401.53706,
+        "max": 115,
+        "min": 30,
+        "minutes": 704,
+        "name": "Out of Range"
+      },
+      {
+        "caloriesOut": 603.64682,
+        "max": 140,
+        "min": 115,
+        "minutes": 129,
+        "name": "Fat Burn"
+      },
+      {
+        "caloriesOut": 0,
+        "max": 172,
+        "min": 140,
+        "minutes": 0,
+        "name": "Cardio"
+      },
+      {
+        "caloriesOut": 0,
+        "max": 220,
+        "min": 172,
+        "minutes": 0,
+        "name": "Peak"
+      }
+    ],
+    "lightlyActiveMinutes": 188,
+    "marginalCalories": 629,
+    "restingHeartRate": 65,
+    "sedentaryMinutes": 344,
+    "steps": 7058,
+    "veryActiveMinutes": 1
+  }
+}
