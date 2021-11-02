@@ -1,0 +1,493 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>fitbit_downloader package &mdash; fitbit-downloader 0.1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_paramlinks.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sg_gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sg_gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sg_gallery-dataframe.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sg_gallery-rendered-html.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="fitbit_downloader.models package" href="fitbit_downloader.models.html" />
+    <link rel="prev" title="fitbit_downloader" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> fitbit-downloader
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Tutorial</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Getting started with fitbit-downloader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html">This is my gallery</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">fitbit_downloader</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">fitbit_downloader package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="fitbit_downloader.models.html">fitbit_downloader.models package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fitbit-downloader-authorize-module">fitbit_downloader.authorize module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fitbit-downloader-client-module">fitbit_downloader.client module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-fitbit_downloader.config">fitbit_downloader.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fitbit-downloader-download-module">fitbit_downloader.download module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fitbit-downloader-download-samples-module">fitbit_downloader.download_samples module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-fitbit_downloader.ext_subprocess">fitbit_downloader.ext_subprocess module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-fitbit_downloader.gather_keys_oauth2">fitbit_downloader.gather_keys_oauth2 module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-fitbit_downloader.gen_models">fitbit_downloader.gen_models module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-fitbit_downloader.logger">fitbit_downloader.logger module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fitbit-downloader-main-module">fitbit_downloader.main module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">fitbit-downloader</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">fitbit_downloader</a> &raquo;</li>
+        
+      <li>fitbit_downloader package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/fitbit_downloader.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="module-fitbit_downloader">
+<span id="fitbit-downloader-package"></span><h1>fitbit_downloader package<a class="headerlink" href="#module-fitbit_downloader" title="Permalink to this headline">¶</a></h1>
+<p>A CLI and Python tool for downloading Fitbit data</p>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="fitbit_downloader.models.html">fitbit_downloader.models package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fitbit_downloader.models.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fitbit_downloader.models.html#module-fitbit_downloader.models.activityresponse">fitbit_downloader.models.activityresponse module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fitbit_downloader.models.html#module-fitbit_downloader.models.distanceresponse">fitbit_downloader.models.distanceresponse module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fitbit_downloader.models.html#module-fitbit_downloader.models.elevationresponse">fitbit_downloader.models.elevationresponse module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fitbit_downloader.models.html#module-fitbit_downloader.models.floorsresponse">fitbit_downloader.models.floorsresponse module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fitbit_downloader.models.html#module-fitbit_downloader.models.heartresponse">fitbit_downloader.models.heartresponse module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fitbit_downloader.models.html#module-fitbit_downloader.models.refreshtokenresponse">fitbit_downloader.models.refreshtokenresponse module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fitbit_downloader.models.html#module-fitbit_downloader.models.sleepresponse">fitbit_downloader.models.sleepresponse module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fitbit_downloader.models.html#module-fitbit_downloader.models.stepsresponse">fitbit_downloader.models.stepsresponse module</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="fitbit-downloader-authorize-module">
+<h2>fitbit_downloader.authorize module<a class="headerlink" href="#fitbit-downloader-authorize-module" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="fitbit-downloader-client-module">
+<h2>fitbit_downloader.client module<a class="headerlink" href="#fitbit-downloader-client-module" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-fitbit_downloader.config">
+<span id="fitbit-downloader-config-module"></span><h2>fitbit_downloader.config module<a class="headerlink" href="#module-fitbit_downloader.config" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fitbit_downloader.config.Config">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">fitbit_downloader.config.</span></span><span class="sig-name descname"><span class="pre">Config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_env_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'&lt;object</span> <span class="pre">object&gt;'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_env_file_encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_secrets_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/config.html#Config"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.config.Config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pyappconf.model.BaseConfig</span></code></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="fitbit_downloader.config.Config.Config">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">Config</span></span><a class="reference internal" href="../_modules/fitbit_downloader/config.html#Config.Config"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.config.Config.Config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.config.Config.Config.env_file">
+<span class="sig-name descname"><span class="pre">env_file</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'.env'</span></em><a class="headerlink" href="#fitbit_downloader.config.Config.Config.env_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.config.Config.Config.env_prefix">
+<span class="sig-name descname"><span class="pre">env_prefix</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'FITBIT_DOWNLOADER_'</span></em><a class="headerlink" href="#fitbit_downloader.config.Config.Config.env_prefix" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.config.Config.client_id">
+<span class="sig-name descname"><span class="pre">client_id</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#fitbit_downloader.config.Config.client_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.config.Config.client_secret">
+<span class="sig-name descname"><span class="pre">client_secret</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#fitbit_downloader.config.Config.client_secret" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.config.Config.download">
+<span class="sig-name descname"><span class="pre">download</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="#fitbit_downloader.config.DownloadConfig" title="fitbit_downloader.config.DownloadConfig"><span class="pre">fitbit_downloader.config.DownloadConfig</span></a></em><a class="headerlink" href="#fitbit_downloader.config.Config.download" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.config.Config.oauth_config">
+<span class="sig-name descname"><span class="pre">oauth_config</span></span><em class="property"><span class="pre">:</span> <span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#fitbit_downloader.config.OAuthConfig" title="fitbit_downloader.config.OAuthConfig"><span class="pre">fitbit_downloader.config.OAuthConfig</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#fitbit_downloader.config.Config.oauth_config" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fitbit_downloader.config.Dataset">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">fitbit_downloader.config.</span></span><span class="sig-name descname"><span class="pre">Dataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/config.html#Dataset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.config.Dataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.config.Dataset.ACTIVITIES">
+<span class="sig-name descname"><span class="pre">ACTIVITIES</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'activities'</span></em><a class="headerlink" href="#fitbit_downloader.config.Dataset.ACTIVITIES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.config.Dataset.DISTANCE">
+<span class="sig-name descname"><span class="pre">DISTANCE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'distance'</span></em><a class="headerlink" href="#fitbit_downloader.config.Dataset.DISTANCE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.config.Dataset.ELEVATION">
+<span class="sig-name descname"><span class="pre">ELEVATION</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'elevation'</span></em><a class="headerlink" href="#fitbit_downloader.config.Dataset.ELEVATION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.config.Dataset.FLOORS">
+<span class="sig-name descname"><span class="pre">FLOORS</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'floors'</span></em><a class="headerlink" href="#fitbit_downloader.config.Dataset.FLOORS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.config.Dataset.HEART">
+<span class="sig-name descname"><span class="pre">HEART</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'heart'</span></em><a class="headerlink" href="#fitbit_downloader.config.Dataset.HEART" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.config.Dataset.SLEEP">
+<span class="sig-name descname"><span class="pre">SLEEP</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'sleep'</span></em><a class="headerlink" href="#fitbit_downloader.config.Dataset.SLEEP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.config.Dataset.STEPS">
+<span class="sig-name descname"><span class="pre">STEPS</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'steps'</span></em><a class="headerlink" href="#fitbit_downloader.config.Dataset.STEPS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fitbit_downloader.config.DownloadConfig">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">fitbit_downloader.config.</span></span><span class="sig-name descname"><span class="pre">DownloadConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/config.html#DownloadConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.config.DownloadConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydantic.main.BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.config.DownloadConfig.datasets">
+<span class="sig-name descname"><span class="pre">datasets</span></span><em class="property"><span class="pre">:</span> <span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#fitbit_downloader.config.Dataset" title="fitbit_downloader.config.Dataset"><span class="pre">fitbit_downloader.config.Dataset</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#fitbit_downloader.config.DownloadConfig.datasets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.config.DownloadConfig.out_folder">
+<span class="sig-name descname"><span class="pre">out_folder</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path" title="(in Python v3.10)"><span class="pre">pathlib.Path</span></a></em><a class="headerlink" href="#fitbit_downloader.config.DownloadConfig.out_folder" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fitbit_downloader.config.OAuthConfig">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">fitbit_downloader.config.</span></span><span class="sig-name descname"><span class="pre">OAuthConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/config.html#OAuthConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.config.OAuthConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydantic.main.BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.config.OAuthConfig.access_token">
+<span class="sig-name descname"><span class="pre">access_token</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#fitbit_downloader.config.OAuthConfig.access_token" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.config.OAuthConfig.expires_at">
+<span class="sig-name descname"><span class="pre">expires_at</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><span class="pre">float</span></a></em><a class="headerlink" href="#fitbit_downloader.config.OAuthConfig.expires_at" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fitbit_downloader.config.OAuthConfig.expires_at_time">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">expires_at_time</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.10)"><span class="pre">datetime.datetime</span></a></em><a class="headerlink" href="#fitbit_downloader.config.OAuthConfig.expires_at_time" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.config.OAuthConfig.refresh_token">
+<span class="sig-name descname"><span class="pre">refresh_token</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#fitbit_downloader.config.OAuthConfig.refresh_token" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="fitbit-downloader-download-module">
+<h2>fitbit_downloader.download module<a class="headerlink" href="#fitbit-downloader-download-module" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="fitbit-downloader-download-samples-module">
+<h2>fitbit_downloader.download_samples module<a class="headerlink" href="#fitbit-downloader-download-samples-module" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-fitbit_downloader.ext_subprocess">
+<span id="fitbit-downloader-ext-subprocess-module"></span><h2>fitbit_downloader.ext_subprocess module<a class="headerlink" href="#module-fitbit_downloader.ext_subprocess" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="fitbit_downloader.ext_subprocess.run_and_stream_output">
+<span class="sig-prename descclassname"><span class="pre">fitbit_downloader.ext_subprocess.</span></span><span class="sig-name descname"><span class="pre">run_and_stream_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/ext_subprocess.html#run_and_stream_output"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.ext_subprocess.run_and_stream_output" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fitbit_downloader.ext_subprocess.run_then_show_output">
+<span class="sig-prename descclassname"><span class="pre">fitbit_downloader.ext_subprocess.</span></span><span class="sig-name descname"><span class="pre">run_then_show_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/ext_subprocess.html#run_then_show_output"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.ext_subprocess.run_then_show_output" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-fitbit_downloader.gather_keys_oauth2">
+<span id="fitbit-downloader-gather-keys-oauth2-module"></span><h2>fitbit_downloader.gather_keys_oauth2 module<a class="headerlink" href="#module-fitbit_downloader.gather_keys_oauth2" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fitbit_downloader.gather_keys_oauth2.OAuth2Server">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">fitbit_downloader.gather_keys_oauth2.</span></span><span class="sig-name descname"><span class="pre">OAuth2Server</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">client_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">client_secret</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">redirect_uri</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'http://127.0.0.1:8080/'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/gather_keys_oauth2.html#OAuth2Server"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.gather_keys_oauth2.OAuth2Server" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="fitbit_downloader.gather_keys_oauth2.OAuth2Server.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">client_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">client_secret</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">redirect_uri</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'http://127.0.0.1:8080/'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/gather_keys_oauth2.html#OAuth2Server.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.gather_keys_oauth2.OAuth2Server.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize the FitbitOauth2Client</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitbit_downloader.gather_keys_oauth2.OAuth2Server.browser_authorize">
+<span class="sig-name descname"><span class="pre">browser_authorize</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/gather_keys_oauth2.html#OAuth2Server.browser_authorize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.gather_keys_oauth2.OAuth2Server.browser_authorize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open a browser to the authorization url and spool up a CherryPy
+server to accept the response</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fitbit_downloader.gather_keys_oauth2.OAuth2Server.index">
+<span class="sig-name descname"><span class="pre">index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">code</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/gather_keys_oauth2.html#OAuth2Server.index"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.gather_keys_oauth2.OAuth2Server.index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Receive a Fitbit response containing a verification code. Use the code
+to fetch the access_token.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-fitbit_downloader.gen_models">
+<span id="fitbit-downloader-gen-models-module"></span><h2>fitbit_downloader.gen_models module<a class="headerlink" href="#module-fitbit_downloader.gen_models" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="fitbit_downloader.gen_models.generate_models">
+<span class="sig-prename descclassname"><span class="pre">fitbit_downloader.gen_models.</span></span><span class="sig-name descname"><span class="pre">generate_models</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/gen_models.html#generate_models"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.gen_models.generate_models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fitbit_downloader.gen_models.main">
+<span class="sig-prename descclassname"><span class="pre">fitbit_downloader.gen_models.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/gen_models.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.gen_models.main" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-fitbit_downloader.logger">
+<span id="fitbit-downloader-logger-module"></span><h2>fitbit_downloader.logger module<a class="headerlink" href="#module-fitbit_downloader.logger" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="fitbit-downloader-main-module">
+<h2>fitbit_downloader.main module<a class="headerlink" href="#fitbit-downloader-main-module" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="fitbit_downloader.models.html" class="btn btn-neutral float-right" title="fitbit_downloader.models package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="modules.html" class="btn btn-neutral float-left" title="fitbit_downloader" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2021, Nick DeRobertis
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'G-1FVMQJ01HT', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+fitbit_downloader
+=================
+
+.. toctree::
+   :maxdepth: 4
+
+   fitbit_downloader

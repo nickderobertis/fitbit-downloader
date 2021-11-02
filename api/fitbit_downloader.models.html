@@ -1,0 +1,1168 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>fitbit_downloader.models package &mdash; fitbit-downloader 0.1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_paramlinks.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sg_gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sg_gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sg_gallery-dataframe.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sg_gallery-rendered-html.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="fitbit_downloader package" href="fitbit_downloader.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> fitbit-downloader
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Tutorial</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Getting started with fitbit-downloader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html">This is my gallery</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">fitbit_downloader</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="fitbit_downloader.html">fitbit_downloader package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="fitbit_downloader.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">fitbit_downloader.models package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="fitbit_downloader.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fitbit_downloader.html#fitbit-downloader-authorize-module">fitbit_downloader.authorize module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fitbit_downloader.html#fitbit-downloader-client-module">fitbit_downloader.client module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fitbit_downloader.html#module-fitbit_downloader.config">fitbit_downloader.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fitbit_downloader.html#fitbit-downloader-download-module">fitbit_downloader.download module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fitbit_downloader.html#fitbit-downloader-download-samples-module">fitbit_downloader.download_samples module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fitbit_downloader.html#module-fitbit_downloader.ext_subprocess">fitbit_downloader.ext_subprocess module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fitbit_downloader.html#module-fitbit_downloader.gather_keys_oauth2">fitbit_downloader.gather_keys_oauth2 module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fitbit_downloader.html#module-fitbit_downloader.gen_models">fitbit_downloader.gen_models module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fitbit_downloader.html#module-fitbit_downloader.logger">fitbit_downloader.logger module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fitbit_downloader.html#fitbit-downloader-main-module">fitbit_downloader.main module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">fitbit-downloader</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">fitbit_downloader</a> &raquo;</li>
+        
+          <li><a href="fitbit_downloader.html">fitbit_downloader package</a> &raquo;</li>
+        
+      <li>fitbit_downloader.models package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/fitbit_downloader.models.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="module-fitbit_downloader.models">
+<span id="fitbit-downloader-models-package"></span><h1>fitbit_downloader.models package<a class="headerlink" href="#module-fitbit_downloader.models" title="Permalink to this headline">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-fitbit_downloader.models.activityresponse">
+<span id="fitbit-downloader-models-activityresponse-module"></span><h2>fitbit_downloader.models.activityresponse module<a class="headerlink" href="#module-fitbit_downloader.models.activityresponse" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.Activity">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">fitbit_downloader.models.activityresponse.</span></span><span class="sig-name descname"><span class="pre">Activity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/models/activityresponse.html#Activity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.models.activityresponse.Activity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydantic.main.BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.Activity.activityId">
+<span class="sig-name descname"><span class="pre">activityId</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.Activity.activityId" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.Activity.activityParentId">
+<span class="sig-name descname"><span class="pre">activityParentId</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.Activity.activityParentId" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.Activity.activityParentName">
+<span class="sig-name descname"><span class="pre">activityParentName</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.Activity.activityParentName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.Activity.calories">
+<span class="sig-name descname"><span class="pre">calories</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.Activity.calories" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.Activity.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.Activity.description" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.Activity.duration">
+<span class="sig-name descname"><span class="pre">duration</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.Activity.duration" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.Activity.hasActiveZoneMinutes">
+<span class="sig-name descname"><span class="pre">hasActiveZoneMinutes</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><span class="pre">bool</span></a></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.Activity.hasActiveZoneMinutes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.Activity.hasStartTime">
+<span class="sig-name descname"><span class="pre">hasStartTime</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><span class="pre">bool</span></a></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.Activity.hasStartTime" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.Activity.isFavorite">
+<span class="sig-name descname"><span class="pre">isFavorite</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><span class="pre">bool</span></a></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.Activity.isFavorite" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.Activity.lastModified">
+<span class="sig-name descname"><span class="pre">lastModified</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.Activity.lastModified" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.Activity.logId">
+<span class="sig-name descname"><span class="pre">logId</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.Activity.logId" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.Activity.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.Activity.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.Activity.startDate">
+<span class="sig-name descname"><span class="pre">startDate</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.Activity.startDate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.Activity.startTime">
+<span class="sig-name descname"><span class="pre">startTime</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.Activity.startTime" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.Activity.steps">
+<span class="sig-name descname"><span class="pre">steps</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.Activity.steps" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.ActivityResponse">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">fitbit_downloader.models.activityresponse.</span></span><span class="sig-name descname"><span class="pre">ActivityResponse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/models/activityresponse.html#ActivityResponse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.models.activityresponse.ActivityResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydantic.main.BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.ActivityResponse.activities">
+<span class="sig-name descname"><span class="pre">activities</span></span><em class="property"><span class="pre">:</span> <span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#fitbit_downloader.models.activityresponse.Activity" title="fitbit_downloader.models.activityresponse.Activity"><span class="pre">fitbit_downloader.models.activityresponse.Activity</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.ActivityResponse.activities" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.ActivityResponse.goals">
+<span class="sig-name descname"><span class="pre">goals</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="#fitbit_downloader.models.activityresponse.Goals" title="fitbit_downloader.models.activityresponse.Goals"><span class="pre">fitbit_downloader.models.activityresponse.Goals</span></a></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.ActivityResponse.goals" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.ActivityResponse.summary">
+<span class="sig-name descname"><span class="pre">summary</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="#fitbit_downloader.models.activityresponse.Summary" title="fitbit_downloader.models.activityresponse.Summary"><span class="pre">fitbit_downloader.models.activityresponse.Summary</span></a></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.ActivityResponse.summary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.Distance">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">fitbit_downloader.models.activityresponse.</span></span><span class="sig-name descname"><span class="pre">Distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/models/activityresponse.html#Distance"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.models.activityresponse.Distance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydantic.main.BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.Distance.activity">
+<span class="sig-name descname"><span class="pre">activity</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.Distance.activity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.Distance.distance">
+<span class="sig-name descname"><span class="pre">distance</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><span class="pre">float</span></a></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.Distance.distance" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.Goals">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">fitbit_downloader.models.activityresponse.</span></span><span class="sig-name descname"><span class="pre">Goals</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/models/activityresponse.html#Goals"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.models.activityresponse.Goals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydantic.main.BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.Goals.activeMinutes">
+<span class="sig-name descname"><span class="pre">activeMinutes</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.Goals.activeMinutes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.Goals.caloriesOut">
+<span class="sig-name descname"><span class="pre">caloriesOut</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.Goals.caloriesOut" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.Goals.distance">
+<span class="sig-name descname"><span class="pre">distance</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.Goals.distance" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.Goals.floors">
+<span class="sig-name descname"><span class="pre">floors</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.Goals.floors" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.Goals.steps">
+<span class="sig-name descname"><span class="pre">steps</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.Goals.steps" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.HeartRateZone">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">fitbit_downloader.models.activityresponse.</span></span><span class="sig-name descname"><span class="pre">HeartRateZone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/models/activityresponse.html#HeartRateZone"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.models.activityresponse.HeartRateZone" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydantic.main.BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.HeartRateZone.caloriesOut">
+<span class="sig-name descname"><span class="pre">caloriesOut</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><span class="pre">float</span></a></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.HeartRateZone.caloriesOut" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.HeartRateZone.max">
+<span class="sig-name descname"><span class="pre">max</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.HeartRateZone.max" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.HeartRateZone.min">
+<span class="sig-name descname"><span class="pre">min</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.HeartRateZone.min" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.HeartRateZone.minutes">
+<span class="sig-name descname"><span class="pre">minutes</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.HeartRateZone.minutes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.HeartRateZone.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.HeartRateZone.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.Summary">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">fitbit_downloader.models.activityresponse.</span></span><span class="sig-name descname"><span class="pre">Summary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/models/activityresponse.html#Summary"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.models.activityresponse.Summary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydantic.main.BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.Summary.activeScore">
+<span class="sig-name descname"><span class="pre">activeScore</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.Summary.activeScore" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.Summary.activityCalories">
+<span class="sig-name descname"><span class="pre">activityCalories</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.Summary.activityCalories" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.Summary.caloriesBMR">
+<span class="sig-name descname"><span class="pre">caloriesBMR</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.Summary.caloriesBMR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.Summary.caloriesOut">
+<span class="sig-name descname"><span class="pre">caloriesOut</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.Summary.caloriesOut" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.Summary.distances">
+<span class="sig-name descname"><span class="pre">distances</span></span><em class="property"><span class="pre">:</span> <span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#fitbit_downloader.models.activityresponse.Distance" title="fitbit_downloader.models.activityresponse.Distance"><span class="pre">fitbit_downloader.models.activityresponse.Distance</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.Summary.distances" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.Summary.elevation">
+<span class="sig-name descname"><span class="pre">elevation</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.Summary.elevation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.Summary.fairlyActiveMinutes">
+<span class="sig-name descname"><span class="pre">fairlyActiveMinutes</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.Summary.fairlyActiveMinutes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.Summary.floors">
+<span class="sig-name descname"><span class="pre">floors</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.Summary.floors" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.Summary.heartRateZones">
+<span class="sig-name descname"><span class="pre">heartRateZones</span></span><em class="property"><span class="pre">:</span> <span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#fitbit_downloader.models.activityresponse.HeartRateZone" title="fitbit_downloader.models.activityresponse.HeartRateZone"><span class="pre">fitbit_downloader.models.activityresponse.HeartRateZone</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.Summary.heartRateZones" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.Summary.lightlyActiveMinutes">
+<span class="sig-name descname"><span class="pre">lightlyActiveMinutes</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.Summary.lightlyActiveMinutes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.Summary.marginalCalories">
+<span class="sig-name descname"><span class="pre">marginalCalories</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.Summary.marginalCalories" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.Summary.restingHeartRate">
+<span class="sig-name descname"><span class="pre">restingHeartRate</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.Summary.restingHeartRate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.Summary.sedentaryMinutes">
+<span class="sig-name descname"><span class="pre">sedentaryMinutes</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.Summary.sedentaryMinutes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.Summary.steps">
+<span class="sig-name descname"><span class="pre">steps</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.Summary.steps" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.activityresponse.Summary.veryActiveMinutes">
+<span class="sig-name descname"><span class="pre">veryActiveMinutes</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.activityresponse.Summary.veryActiveMinutes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-fitbit_downloader.models.distanceresponse">
+<span id="fitbit-downloader-models-distanceresponse-module"></span><h2>fitbit_downloader.models.distanceresponse module<a class="headerlink" href="#module-fitbit_downloader.models.distanceresponse" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fitbit_downloader.models.distanceresponse.ActivitiesDistanceIntraday">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">fitbit_downloader.models.distanceresponse.</span></span><span class="sig-name descname"><span class="pre">ActivitiesDistanceIntraday</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/models/distanceresponse.html#ActivitiesDistanceIntraday"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.models.distanceresponse.ActivitiesDistanceIntraday" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydantic.main.BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.distanceresponse.ActivitiesDistanceIntraday.dataset">
+<span class="sig-name descname"><span class="pre">dataset</span></span><em class="property"><span class="pre">:</span> <span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#fitbit_downloader.models.distanceresponse.DatasetItem" title="fitbit_downloader.models.distanceresponse.DatasetItem"><span class="pre">fitbit_downloader.models.distanceresponse.DatasetItem</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#fitbit_downloader.models.distanceresponse.ActivitiesDistanceIntraday.dataset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.distanceresponse.ActivitiesDistanceIntraday.datasetInterval">
+<span class="sig-name descname"><span class="pre">datasetInterval</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.distanceresponse.ActivitiesDistanceIntraday.datasetInterval" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.distanceresponse.ActivitiesDistanceIntraday.datasetType">
+<span class="sig-name descname"><span class="pre">datasetType</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#fitbit_downloader.models.distanceresponse.ActivitiesDistanceIntraday.datasetType" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fitbit_downloader.models.distanceresponse.ActivitiesDistanceItem">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">fitbit_downloader.models.distanceresponse.</span></span><span class="sig-name descname"><span class="pre">ActivitiesDistanceItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/models/distanceresponse.html#ActivitiesDistanceItem"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.models.distanceresponse.ActivitiesDistanceItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydantic.main.BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.distanceresponse.ActivitiesDistanceItem.dateTime">
+<span class="sig-name descname"><span class="pre">dateTime</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#fitbit_downloader.models.distanceresponse.ActivitiesDistanceItem.dateTime" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.distanceresponse.ActivitiesDistanceItem.value">
+<span class="sig-name descname"><span class="pre">value</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#fitbit_downloader.models.distanceresponse.ActivitiesDistanceItem.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fitbit_downloader.models.distanceresponse.DatasetItem">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">fitbit_downloader.models.distanceresponse.</span></span><span class="sig-name descname"><span class="pre">DatasetItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/models/distanceresponse.html#DatasetItem"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.models.distanceresponse.DatasetItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydantic.main.BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.distanceresponse.DatasetItem.time">
+<span class="sig-name descname"><span class="pre">time</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#fitbit_downloader.models.distanceresponse.DatasetItem.time" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.distanceresponse.DatasetItem.value">
+<span class="sig-name descname"><span class="pre">value</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><span class="pre">float</span></a></em><a class="headerlink" href="#fitbit_downloader.models.distanceresponse.DatasetItem.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fitbit_downloader.models.distanceresponse.DistanceResponse">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">fitbit_downloader.models.distanceresponse.</span></span><span class="sig-name descname"><span class="pre">DistanceResponse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/models/distanceresponse.html#DistanceResponse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.models.distanceresponse.DistanceResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydantic.main.BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.distanceresponse.DistanceResponse.activities_distance">
+<span class="sig-name descname"><span class="pre">activities_distance</span></span><em class="property"><span class="pre">:</span> <span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#fitbit_downloader.models.distanceresponse.ActivitiesDistanceItem" title="fitbit_downloader.models.distanceresponse.ActivitiesDistanceItem"><span class="pre">fitbit_downloader.models.distanceresponse.ActivitiesDistanceItem</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#fitbit_downloader.models.distanceresponse.DistanceResponse.activities_distance" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.distanceresponse.DistanceResponse.activities_distance_intraday">
+<span class="sig-name descname"><span class="pre">activities_distance_intraday</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="#fitbit_downloader.models.distanceresponse.ActivitiesDistanceIntraday" title="fitbit_downloader.models.distanceresponse.ActivitiesDistanceIntraday"><span class="pre">fitbit_downloader.models.distanceresponse.ActivitiesDistanceIntraday</span></a></em><a class="headerlink" href="#fitbit_downloader.models.distanceresponse.DistanceResponse.activities_distance_intraday" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-fitbit_downloader.models.elevationresponse">
+<span id="fitbit-downloader-models-elevationresponse-module"></span><h2>fitbit_downloader.models.elevationresponse module<a class="headerlink" href="#module-fitbit_downloader.models.elevationresponse" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fitbit_downloader.models.elevationresponse.ActivitiesElevationIntraday">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">fitbit_downloader.models.elevationresponse.</span></span><span class="sig-name descname"><span class="pre">ActivitiesElevationIntraday</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/models/elevationresponse.html#ActivitiesElevationIntraday"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.models.elevationresponse.ActivitiesElevationIntraday" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydantic.main.BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.elevationresponse.ActivitiesElevationIntraday.dataset">
+<span class="sig-name descname"><span class="pre">dataset</span></span><em class="property"><span class="pre">:</span> <span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#fitbit_downloader.models.elevationresponse.DatasetItem" title="fitbit_downloader.models.elevationresponse.DatasetItem"><span class="pre">fitbit_downloader.models.elevationresponse.DatasetItem</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#fitbit_downloader.models.elevationresponse.ActivitiesElevationIntraday.dataset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.elevationresponse.ActivitiesElevationIntraday.datasetInterval">
+<span class="sig-name descname"><span class="pre">datasetInterval</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.elevationresponse.ActivitiesElevationIntraday.datasetInterval" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.elevationresponse.ActivitiesElevationIntraday.datasetType">
+<span class="sig-name descname"><span class="pre">datasetType</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#fitbit_downloader.models.elevationresponse.ActivitiesElevationIntraday.datasetType" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fitbit_downloader.models.elevationresponse.ActivitiesElevationItem">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">fitbit_downloader.models.elevationresponse.</span></span><span class="sig-name descname"><span class="pre">ActivitiesElevationItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/models/elevationresponse.html#ActivitiesElevationItem"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.models.elevationresponse.ActivitiesElevationItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydantic.main.BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.elevationresponse.ActivitiesElevationItem.dateTime">
+<span class="sig-name descname"><span class="pre">dateTime</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#fitbit_downloader.models.elevationresponse.ActivitiesElevationItem.dateTime" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.elevationresponse.ActivitiesElevationItem.value">
+<span class="sig-name descname"><span class="pre">value</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#fitbit_downloader.models.elevationresponse.ActivitiesElevationItem.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fitbit_downloader.models.elevationresponse.DatasetItem">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">fitbit_downloader.models.elevationresponse.</span></span><span class="sig-name descname"><span class="pre">DatasetItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/models/elevationresponse.html#DatasetItem"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.models.elevationresponse.DatasetItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydantic.main.BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.elevationresponse.DatasetItem.time">
+<span class="sig-name descname"><span class="pre">time</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#fitbit_downloader.models.elevationresponse.DatasetItem.time" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.elevationresponse.DatasetItem.value">
+<span class="sig-name descname"><span class="pre">value</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.elevationresponse.DatasetItem.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fitbit_downloader.models.elevationresponse.ElevationResponse">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">fitbit_downloader.models.elevationresponse.</span></span><span class="sig-name descname"><span class="pre">ElevationResponse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/models/elevationresponse.html#ElevationResponse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.models.elevationresponse.ElevationResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydantic.main.BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.elevationresponse.ElevationResponse.activities_elevation">
+<span class="sig-name descname"><span class="pre">activities_elevation</span></span><em class="property"><span class="pre">:</span> <span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#fitbit_downloader.models.elevationresponse.ActivitiesElevationItem" title="fitbit_downloader.models.elevationresponse.ActivitiesElevationItem"><span class="pre">fitbit_downloader.models.elevationresponse.ActivitiesElevationItem</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#fitbit_downloader.models.elevationresponse.ElevationResponse.activities_elevation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.elevationresponse.ElevationResponse.activities_elevation_intraday">
+<span class="sig-name descname"><span class="pre">activities_elevation_intraday</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="#fitbit_downloader.models.elevationresponse.ActivitiesElevationIntraday" title="fitbit_downloader.models.elevationresponse.ActivitiesElevationIntraday"><span class="pre">fitbit_downloader.models.elevationresponse.ActivitiesElevationIntraday</span></a></em><a class="headerlink" href="#fitbit_downloader.models.elevationresponse.ElevationResponse.activities_elevation_intraday" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-fitbit_downloader.models.floorsresponse">
+<span id="fitbit-downloader-models-floorsresponse-module"></span><h2>fitbit_downloader.models.floorsresponse module<a class="headerlink" href="#module-fitbit_downloader.models.floorsresponse" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fitbit_downloader.models.floorsresponse.ActivitiesFloor">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">fitbit_downloader.models.floorsresponse.</span></span><span class="sig-name descname"><span class="pre">ActivitiesFloor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/models/floorsresponse.html#ActivitiesFloor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.models.floorsresponse.ActivitiesFloor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydantic.main.BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.floorsresponse.ActivitiesFloor.dateTime">
+<span class="sig-name descname"><span class="pre">dateTime</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#fitbit_downloader.models.floorsresponse.ActivitiesFloor.dateTime" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.floorsresponse.ActivitiesFloor.value">
+<span class="sig-name descname"><span class="pre">value</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#fitbit_downloader.models.floorsresponse.ActivitiesFloor.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fitbit_downloader.models.floorsresponse.ActivitiesFloorsIntraday">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">fitbit_downloader.models.floorsresponse.</span></span><span class="sig-name descname"><span class="pre">ActivitiesFloorsIntraday</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/models/floorsresponse.html#ActivitiesFloorsIntraday"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.models.floorsresponse.ActivitiesFloorsIntraday" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydantic.main.BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.floorsresponse.ActivitiesFloorsIntraday.dataset">
+<span class="sig-name descname"><span class="pre">dataset</span></span><em class="property"><span class="pre">:</span> <span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#fitbit_downloader.models.floorsresponse.DatasetItem" title="fitbit_downloader.models.floorsresponse.DatasetItem"><span class="pre">fitbit_downloader.models.floorsresponse.DatasetItem</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#fitbit_downloader.models.floorsresponse.ActivitiesFloorsIntraday.dataset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.floorsresponse.ActivitiesFloorsIntraday.datasetInterval">
+<span class="sig-name descname"><span class="pre">datasetInterval</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.floorsresponse.ActivitiesFloorsIntraday.datasetInterval" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.floorsresponse.ActivitiesFloorsIntraday.datasetType">
+<span class="sig-name descname"><span class="pre">datasetType</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#fitbit_downloader.models.floorsresponse.ActivitiesFloorsIntraday.datasetType" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fitbit_downloader.models.floorsresponse.DatasetItem">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">fitbit_downloader.models.floorsresponse.</span></span><span class="sig-name descname"><span class="pre">DatasetItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/models/floorsresponse.html#DatasetItem"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.models.floorsresponse.DatasetItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydantic.main.BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.floorsresponse.DatasetItem.time">
+<span class="sig-name descname"><span class="pre">time</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#fitbit_downloader.models.floorsresponse.DatasetItem.time" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.floorsresponse.DatasetItem.value">
+<span class="sig-name descname"><span class="pre">value</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.floorsresponse.DatasetItem.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fitbit_downloader.models.floorsresponse.FloorsResponse">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">fitbit_downloader.models.floorsresponse.</span></span><span class="sig-name descname"><span class="pre">FloorsResponse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/models/floorsresponse.html#FloorsResponse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.models.floorsresponse.FloorsResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydantic.main.BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.floorsresponse.FloorsResponse.activities_floors">
+<span class="sig-name descname"><span class="pre">activities_floors</span></span><em class="property"><span class="pre">:</span> <span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#fitbit_downloader.models.floorsresponse.ActivitiesFloor" title="fitbit_downloader.models.floorsresponse.ActivitiesFloor"><span class="pre">fitbit_downloader.models.floorsresponse.ActivitiesFloor</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#fitbit_downloader.models.floorsresponse.FloorsResponse.activities_floors" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.floorsresponse.FloorsResponse.activities_floors_intraday">
+<span class="sig-name descname"><span class="pre">activities_floors_intraday</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="#fitbit_downloader.models.floorsresponse.ActivitiesFloorsIntraday" title="fitbit_downloader.models.floorsresponse.ActivitiesFloorsIntraday"><span class="pre">fitbit_downloader.models.floorsresponse.ActivitiesFloorsIntraday</span></a></em><a class="headerlink" href="#fitbit_downloader.models.floorsresponse.FloorsResponse.activities_floors_intraday" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-fitbit_downloader.models.heartresponse">
+<span id="fitbit-downloader-models-heartresponse-module"></span><h2>fitbit_downloader.models.heartresponse module<a class="headerlink" href="#module-fitbit_downloader.models.heartresponse" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fitbit_downloader.models.heartresponse.ActivitiesHeartIntraday">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">fitbit_downloader.models.heartresponse.</span></span><span class="sig-name descname"><span class="pre">ActivitiesHeartIntraday</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/models/heartresponse.html#ActivitiesHeartIntraday"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.models.heartresponse.ActivitiesHeartIntraday" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydantic.main.BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.heartresponse.ActivitiesHeartIntraday.dataset">
+<span class="sig-name descname"><span class="pre">dataset</span></span><em class="property"><span class="pre">:</span> <span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#fitbit_downloader.models.heartresponse.DatasetItem" title="fitbit_downloader.models.heartresponse.DatasetItem"><span class="pre">fitbit_downloader.models.heartresponse.DatasetItem</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#fitbit_downloader.models.heartresponse.ActivitiesHeartIntraday.dataset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.heartresponse.ActivitiesHeartIntraday.datasetInterval">
+<span class="sig-name descname"><span class="pre">datasetInterval</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.heartresponse.ActivitiesHeartIntraday.datasetInterval" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.heartresponse.ActivitiesHeartIntraday.datasetType">
+<span class="sig-name descname"><span class="pre">datasetType</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#fitbit_downloader.models.heartresponse.ActivitiesHeartIntraday.datasetType" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fitbit_downloader.models.heartresponse.ActivitiesHeartItem">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">fitbit_downloader.models.heartresponse.</span></span><span class="sig-name descname"><span class="pre">ActivitiesHeartItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/models/heartresponse.html#ActivitiesHeartItem"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.models.heartresponse.ActivitiesHeartItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydantic.main.BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.heartresponse.ActivitiesHeartItem.dateTime">
+<span class="sig-name descname"><span class="pre">dateTime</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#fitbit_downloader.models.heartresponse.ActivitiesHeartItem.dateTime" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.heartresponse.ActivitiesHeartItem.value">
+<span class="sig-name descname"><span class="pre">value</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="#fitbit_downloader.models.heartresponse.Value" title="fitbit_downloader.models.heartresponse.Value"><span class="pre">fitbit_downloader.models.heartresponse.Value</span></a></em><a class="headerlink" href="#fitbit_downloader.models.heartresponse.ActivitiesHeartItem.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fitbit_downloader.models.heartresponse.DatasetItem">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">fitbit_downloader.models.heartresponse.</span></span><span class="sig-name descname"><span class="pre">DatasetItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/models/heartresponse.html#DatasetItem"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.models.heartresponse.DatasetItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydantic.main.BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.heartresponse.DatasetItem.time">
+<span class="sig-name descname"><span class="pre">time</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#fitbit_downloader.models.heartresponse.DatasetItem.time" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.heartresponse.DatasetItem.value">
+<span class="sig-name descname"><span class="pre">value</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.heartresponse.DatasetItem.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fitbit_downloader.models.heartresponse.HeartRateZone">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">fitbit_downloader.models.heartresponse.</span></span><span class="sig-name descname"><span class="pre">HeartRateZone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/models/heartresponse.html#HeartRateZone"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.models.heartresponse.HeartRateZone" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydantic.main.BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.heartresponse.HeartRateZone.caloriesOut">
+<span class="sig-name descname"><span class="pre">caloriesOut</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><span class="pre">float</span></a></em><a class="headerlink" href="#fitbit_downloader.models.heartresponse.HeartRateZone.caloriesOut" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.heartresponse.HeartRateZone.max">
+<span class="sig-name descname"><span class="pre">max</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.heartresponse.HeartRateZone.max" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.heartresponse.HeartRateZone.min">
+<span class="sig-name descname"><span class="pre">min</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.heartresponse.HeartRateZone.min" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.heartresponse.HeartRateZone.minutes">
+<span class="sig-name descname"><span class="pre">minutes</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.heartresponse.HeartRateZone.minutes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.heartresponse.HeartRateZone.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#fitbit_downloader.models.heartresponse.HeartRateZone.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fitbit_downloader.models.heartresponse.HeartResponse">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">fitbit_downloader.models.heartresponse.</span></span><span class="sig-name descname"><span class="pre">HeartResponse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/models/heartresponse.html#HeartResponse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.models.heartresponse.HeartResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydantic.main.BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.heartresponse.HeartResponse.activities_heart">
+<span class="sig-name descname"><span class="pre">activities_heart</span></span><em class="property"><span class="pre">:</span> <span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#fitbit_downloader.models.heartresponse.ActivitiesHeartItem" title="fitbit_downloader.models.heartresponse.ActivitiesHeartItem"><span class="pre">fitbit_downloader.models.heartresponse.ActivitiesHeartItem</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#fitbit_downloader.models.heartresponse.HeartResponse.activities_heart" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.heartresponse.HeartResponse.activities_heart_intraday">
+<span class="sig-name descname"><span class="pre">activities_heart_intraday</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="#fitbit_downloader.models.heartresponse.ActivitiesHeartIntraday" title="fitbit_downloader.models.heartresponse.ActivitiesHeartIntraday"><span class="pre">fitbit_downloader.models.heartresponse.ActivitiesHeartIntraday</span></a></em><a class="headerlink" href="#fitbit_downloader.models.heartresponse.HeartResponse.activities_heart_intraday" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fitbit_downloader.models.heartresponse.Value">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">fitbit_downloader.models.heartresponse.</span></span><span class="sig-name descname"><span class="pre">Value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/models/heartresponse.html#Value"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.models.heartresponse.Value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydantic.main.BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.heartresponse.Value.customHeartRateZones">
+<span class="sig-name descname"><span class="pre">customHeartRateZones</span></span><em class="property"><span class="pre">:</span> <span class="pre">List</span></em><a class="headerlink" href="#fitbit_downloader.models.heartresponse.Value.customHeartRateZones" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.heartresponse.Value.heartRateZones">
+<span class="sig-name descname"><span class="pre">heartRateZones</span></span><em class="property"><span class="pre">:</span> <span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#fitbit_downloader.models.heartresponse.HeartRateZone" title="fitbit_downloader.models.heartresponse.HeartRateZone"><span class="pre">fitbit_downloader.models.heartresponse.HeartRateZone</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#fitbit_downloader.models.heartresponse.Value.heartRateZones" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.heartresponse.Value.restingHeartRate">
+<span class="sig-name descname"><span class="pre">restingHeartRate</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.heartresponse.Value.restingHeartRate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-fitbit_downloader.models.refreshtokenresponse">
+<span id="fitbit-downloader-models-refreshtokenresponse-module"></span><h2>fitbit_downloader.models.refreshtokenresponse module<a class="headerlink" href="#module-fitbit_downloader.models.refreshtokenresponse" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fitbit_downloader.models.refreshtokenresponse.RefreshTokenResponse">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">fitbit_downloader.models.refreshtokenresponse.</span></span><span class="sig-name descname"><span class="pre">RefreshTokenResponse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/models/refreshtokenresponse.html#RefreshTokenResponse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.models.refreshtokenresponse.RefreshTokenResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydantic.main.BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.refreshtokenresponse.RefreshTokenResponse.access_token">
+<span class="sig-name descname"><span class="pre">access_token</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#fitbit_downloader.models.refreshtokenresponse.RefreshTokenResponse.access_token" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.refreshtokenresponse.RefreshTokenResponse.expires_at">
+<span class="sig-name descname"><span class="pre">expires_at</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><span class="pre">float</span></a></em><a class="headerlink" href="#fitbit_downloader.models.refreshtokenresponse.RefreshTokenResponse.expires_at" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.refreshtokenresponse.RefreshTokenResponse.expires_in">
+<span class="sig-name descname"><span class="pre">expires_in</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.refreshtokenresponse.RefreshTokenResponse.expires_in" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.refreshtokenresponse.RefreshTokenResponse.refresh_token">
+<span class="sig-name descname"><span class="pre">refresh_token</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#fitbit_downloader.models.refreshtokenresponse.RefreshTokenResponse.refresh_token" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.refreshtokenresponse.RefreshTokenResponse.scope">
+<span class="sig-name descname"><span class="pre">scope</span></span><em class="property"><span class="pre">:</span> <span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#fitbit_downloader.models.refreshtokenresponse.RefreshTokenResponse.scope" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.refreshtokenresponse.RefreshTokenResponse.token_type">
+<span class="sig-name descname"><span class="pre">token_type</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#fitbit_downloader.models.refreshtokenresponse.RefreshTokenResponse.token_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.refreshtokenresponse.RefreshTokenResponse.user_id">
+<span class="sig-name descname"><span class="pre">user_id</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#fitbit_downloader.models.refreshtokenresponse.RefreshTokenResponse.user_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-fitbit_downloader.models.sleepresponse">
+<span id="fitbit-downloader-models-sleepresponse-module"></span><h2>fitbit_downloader.models.sleepresponse module<a class="headerlink" href="#module-fitbit_downloader.models.sleepresponse" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fitbit_downloader.models.sleepresponse.MinuteDatum">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">fitbit_downloader.models.sleepresponse.</span></span><span class="sig-name descname"><span class="pre">MinuteDatum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/models/sleepresponse.html#MinuteDatum"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.models.sleepresponse.MinuteDatum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydantic.main.BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.sleepresponse.MinuteDatum.dateTime">
+<span class="sig-name descname"><span class="pre">dateTime</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#fitbit_downloader.models.sleepresponse.MinuteDatum.dateTime" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.sleepresponse.MinuteDatum.value">
+<span class="sig-name descname"><span class="pre">value</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#fitbit_downloader.models.sleepresponse.MinuteDatum.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fitbit_downloader.models.sleepresponse.SleepItem">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">fitbit_downloader.models.sleepresponse.</span></span><span class="sig-name descname"><span class="pre">SleepItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/models/sleepresponse.html#SleepItem"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.models.sleepresponse.SleepItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydantic.main.BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.sleepresponse.SleepItem.awakeCount">
+<span class="sig-name descname"><span class="pre">awakeCount</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.sleepresponse.SleepItem.awakeCount" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.sleepresponse.SleepItem.awakeDuration">
+<span class="sig-name descname"><span class="pre">awakeDuration</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.sleepresponse.SleepItem.awakeDuration" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.sleepresponse.SleepItem.awakeningsCount">
+<span class="sig-name descname"><span class="pre">awakeningsCount</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.sleepresponse.SleepItem.awakeningsCount" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.sleepresponse.SleepItem.dateOfSleep">
+<span class="sig-name descname"><span class="pre">dateOfSleep</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#fitbit_downloader.models.sleepresponse.SleepItem.dateOfSleep" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.sleepresponse.SleepItem.duration">
+<span class="sig-name descname"><span class="pre">duration</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.sleepresponse.SleepItem.duration" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.sleepresponse.SleepItem.efficiency">
+<span class="sig-name descname"><span class="pre">efficiency</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.sleepresponse.SleepItem.efficiency" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.sleepresponse.SleepItem.endTime">
+<span class="sig-name descname"><span class="pre">endTime</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#fitbit_downloader.models.sleepresponse.SleepItem.endTime" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.sleepresponse.SleepItem.isMainSleep">
+<span class="sig-name descname"><span class="pre">isMainSleep</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><span class="pre">bool</span></a></em><a class="headerlink" href="#fitbit_downloader.models.sleepresponse.SleepItem.isMainSleep" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.sleepresponse.SleepItem.logId">
+<span class="sig-name descname"><span class="pre">logId</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.sleepresponse.SleepItem.logId" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.sleepresponse.SleepItem.minuteData">
+<span class="sig-name descname"><span class="pre">minuteData</span></span><em class="property"><span class="pre">:</span> <span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#fitbit_downloader.models.sleepresponse.MinuteDatum" title="fitbit_downloader.models.sleepresponse.MinuteDatum"><span class="pre">fitbit_downloader.models.sleepresponse.MinuteDatum</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#fitbit_downloader.models.sleepresponse.SleepItem.minuteData" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.sleepresponse.SleepItem.minutesAfterWakeup">
+<span class="sig-name descname"><span class="pre">minutesAfterWakeup</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.sleepresponse.SleepItem.minutesAfterWakeup" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.sleepresponse.SleepItem.minutesAsleep">
+<span class="sig-name descname"><span class="pre">minutesAsleep</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.sleepresponse.SleepItem.minutesAsleep" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.sleepresponse.SleepItem.minutesAwake">
+<span class="sig-name descname"><span class="pre">minutesAwake</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.sleepresponse.SleepItem.minutesAwake" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.sleepresponse.SleepItem.minutesToFallAsleep">
+<span class="sig-name descname"><span class="pre">minutesToFallAsleep</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.sleepresponse.SleepItem.minutesToFallAsleep" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.sleepresponse.SleepItem.restlessCount">
+<span class="sig-name descname"><span class="pre">restlessCount</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.sleepresponse.SleepItem.restlessCount" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.sleepresponse.SleepItem.restlessDuration">
+<span class="sig-name descname"><span class="pre">restlessDuration</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.sleepresponse.SleepItem.restlessDuration" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.sleepresponse.SleepItem.startTime">
+<span class="sig-name descname"><span class="pre">startTime</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#fitbit_downloader.models.sleepresponse.SleepItem.startTime" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.sleepresponse.SleepItem.timeInBed">
+<span class="sig-name descname"><span class="pre">timeInBed</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.sleepresponse.SleepItem.timeInBed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fitbit_downloader.models.sleepresponse.SleepResponse">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">fitbit_downloader.models.sleepresponse.</span></span><span class="sig-name descname"><span class="pre">SleepResponse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/models/sleepresponse.html#SleepResponse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.models.sleepresponse.SleepResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydantic.main.BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.sleepresponse.SleepResponse.sleep">
+<span class="sig-name descname"><span class="pre">sleep</span></span><em class="property"><span class="pre">:</span> <span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#fitbit_downloader.models.sleepresponse.SleepItem" title="fitbit_downloader.models.sleepresponse.SleepItem"><span class="pre">fitbit_downloader.models.sleepresponse.SleepItem</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#fitbit_downloader.models.sleepresponse.SleepResponse.sleep" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.sleepresponse.SleepResponse.summary">
+<span class="sig-name descname"><span class="pre">summary</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="#fitbit_downloader.models.sleepresponse.Summary" title="fitbit_downloader.models.sleepresponse.Summary"><span class="pre">fitbit_downloader.models.sleepresponse.Summary</span></a></em><a class="headerlink" href="#fitbit_downloader.models.sleepresponse.SleepResponse.summary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fitbit_downloader.models.sleepresponse.Stages">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">fitbit_downloader.models.sleepresponse.</span></span><span class="sig-name descname"><span class="pre">Stages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/models/sleepresponse.html#Stages"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.models.sleepresponse.Stages" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydantic.main.BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.sleepresponse.Stages.deep">
+<span class="sig-name descname"><span class="pre">deep</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.sleepresponse.Stages.deep" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.sleepresponse.Stages.light">
+<span class="sig-name descname"><span class="pre">light</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.sleepresponse.Stages.light" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.sleepresponse.Stages.rem">
+<span class="sig-name descname"><span class="pre">rem</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.sleepresponse.Stages.rem" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.sleepresponse.Stages.wake">
+<span class="sig-name descname"><span class="pre">wake</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.sleepresponse.Stages.wake" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fitbit_downloader.models.sleepresponse.Summary">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">fitbit_downloader.models.sleepresponse.</span></span><span class="sig-name descname"><span class="pre">Summary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/models/sleepresponse.html#Summary"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.models.sleepresponse.Summary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydantic.main.BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.sleepresponse.Summary.stages">
+<span class="sig-name descname"><span class="pre">stages</span></span><em class="property"><span class="pre">:</span> <span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#fitbit_downloader.models.sleepresponse.Stages" title="fitbit_downloader.models.sleepresponse.Stages"><span class="pre">fitbit_downloader.models.sleepresponse.Stages</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#fitbit_downloader.models.sleepresponse.Summary.stages" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.sleepresponse.Summary.totalMinutesAsleep">
+<span class="sig-name descname"><span class="pre">totalMinutesAsleep</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.sleepresponse.Summary.totalMinutesAsleep" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.sleepresponse.Summary.totalSleepRecords">
+<span class="sig-name descname"><span class="pre">totalSleepRecords</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.sleepresponse.Summary.totalSleepRecords" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.sleepresponse.Summary.totalTimeInBed">
+<span class="sig-name descname"><span class="pre">totalTimeInBed</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.sleepresponse.Summary.totalTimeInBed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-fitbit_downloader.models.stepsresponse">
+<span id="fitbit-downloader-models-stepsresponse-module"></span><h2>fitbit_downloader.models.stepsresponse module<a class="headerlink" href="#module-fitbit_downloader.models.stepsresponse" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fitbit_downloader.models.stepsresponse.ActivitiesStep">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">fitbit_downloader.models.stepsresponse.</span></span><span class="sig-name descname"><span class="pre">ActivitiesStep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/models/stepsresponse.html#ActivitiesStep"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.models.stepsresponse.ActivitiesStep" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydantic.main.BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.stepsresponse.ActivitiesStep.dateTime">
+<span class="sig-name descname"><span class="pre">dateTime</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#fitbit_downloader.models.stepsresponse.ActivitiesStep.dateTime" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.stepsresponse.ActivitiesStep.value">
+<span class="sig-name descname"><span class="pre">value</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#fitbit_downloader.models.stepsresponse.ActivitiesStep.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fitbit_downloader.models.stepsresponse.ActivitiesStepsIntraday">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">fitbit_downloader.models.stepsresponse.</span></span><span class="sig-name descname"><span class="pre">ActivitiesStepsIntraday</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/models/stepsresponse.html#ActivitiesStepsIntraday"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.models.stepsresponse.ActivitiesStepsIntraday" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydantic.main.BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.stepsresponse.ActivitiesStepsIntraday.dataset">
+<span class="sig-name descname"><span class="pre">dataset</span></span><em class="property"><span class="pre">:</span> <span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#fitbit_downloader.models.stepsresponse.DatasetItem" title="fitbit_downloader.models.stepsresponse.DatasetItem"><span class="pre">fitbit_downloader.models.stepsresponse.DatasetItem</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#fitbit_downloader.models.stepsresponse.ActivitiesStepsIntraday.dataset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.stepsresponse.ActivitiesStepsIntraday.datasetInterval">
+<span class="sig-name descname"><span class="pre">datasetInterval</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.stepsresponse.ActivitiesStepsIntraday.datasetInterval" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.stepsresponse.ActivitiesStepsIntraday.datasetType">
+<span class="sig-name descname"><span class="pre">datasetType</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#fitbit_downloader.models.stepsresponse.ActivitiesStepsIntraday.datasetType" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fitbit_downloader.models.stepsresponse.DatasetItem">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">fitbit_downloader.models.stepsresponse.</span></span><span class="sig-name descname"><span class="pre">DatasetItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/models/stepsresponse.html#DatasetItem"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.models.stepsresponse.DatasetItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydantic.main.BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.stepsresponse.DatasetItem.time">
+<span class="sig-name descname"><span class="pre">time</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></em><a class="headerlink" href="#fitbit_downloader.models.stepsresponse.DatasetItem.time" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.stepsresponse.DatasetItem.value">
+<span class="sig-name descname"><span class="pre">value</span></span><em class="property"><span class="pre">:</span> <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><span class="pre">int</span></a></em><a class="headerlink" href="#fitbit_downloader.models.stepsresponse.DatasetItem.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="fitbit_downloader.models.stepsresponse.StepsResponse">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">fitbit_downloader.models.stepsresponse.</span></span><span class="sig-name descname"><span class="pre">StepsResponse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/fitbit_downloader/models/stepsresponse.html#StepsResponse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fitbit_downloader.models.stepsresponse.StepsResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydantic.main.BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.stepsresponse.StepsResponse.activities_steps">
+<span class="sig-name descname"><span class="pre">activities_steps</span></span><em class="property"><span class="pre">:</span> <span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#fitbit_downloader.models.stepsresponse.ActivitiesStep" title="fitbit_downloader.models.stepsresponse.ActivitiesStep"><span class="pre">fitbit_downloader.models.stepsresponse.ActivitiesStep</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#fitbit_downloader.models.stepsresponse.StepsResponse.activities_steps" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="fitbit_downloader.models.stepsresponse.StepsResponse.activities_steps_intraday">
+<span class="sig-name descname"><span class="pre">activities_steps_intraday</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="#fitbit_downloader.models.stepsresponse.ActivitiesStepsIntraday" title="fitbit_downloader.models.stepsresponse.ActivitiesStepsIntraday"><span class="pre">fitbit_downloader.models.stepsresponse.ActivitiesStepsIntraday</span></a></em><a class="headerlink" href="#fitbit_downloader.models.stepsresponse.StepsResponse.activities_steps_intraday" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="fitbit_downloader.html" class="btn btn-neutral float-left" title="fitbit_downloader package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2021, Nick DeRobertis
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'G-1FVMQJ01HT', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>

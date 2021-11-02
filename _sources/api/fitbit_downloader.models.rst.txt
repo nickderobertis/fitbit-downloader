@@ -1,0 +1,75 @@
+fitbit\_downloader.models package
+=================================
+
+.. automodule:: fitbit_downloader.models
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+fitbit\_downloader.models.activityresponse module
+-------------------------------------------------
+
+.. automodule:: fitbit_downloader.models.activityresponse
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+fitbit\_downloader.models.distanceresponse module
+-------------------------------------------------
+
+.. automodule:: fitbit_downloader.models.distanceresponse
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+fitbit\_downloader.models.elevationresponse module
+--------------------------------------------------
+
+.. automodule:: fitbit_downloader.models.elevationresponse
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+fitbit\_downloader.models.floorsresponse module
+-----------------------------------------------
+
+.. automodule:: fitbit_downloader.models.floorsresponse
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+fitbit\_downloader.models.heartresponse module
+----------------------------------------------
+
+.. automodule:: fitbit_downloader.models.heartresponse
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+fitbit\_downloader.models.refreshtokenresponse module
+-----------------------------------------------------
+
+.. automodule:: fitbit_downloader.models.refreshtokenresponse
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+fitbit\_downloader.models.sleepresponse module
+----------------------------------------------
+
+.. automodule:: fitbit_downloader.models.sleepresponse
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+fitbit\_downloader.models.stepsresponse module
+----------------------------------------------
+
+.. automodule:: fitbit_downloader.models.stepsresponse
+   :members:
+   :undoc-members:
+   :show-inheritance:
+

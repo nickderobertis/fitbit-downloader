@@ -1,0 +1,98 @@
+fitbit\_downloader package
+==========================
+
+.. automodule:: fitbit_downloader
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Subpackages
+-----------
+
+.. toctree::
+
+   fitbit_downloader.models
+
+Submodules
+----------
+
+fitbit\_downloader.authorize module
+-----------------------------------
+
+.. automodule:: fitbit_downloader.authorize
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+fitbit\_downloader.client module
+--------------------------------
+
+.. automodule:: fitbit_downloader.client
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+fitbit\_downloader.config module
+--------------------------------
+
+.. automodule:: fitbit_downloader.config
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+fitbit\_downloader.download module
+----------------------------------
+
+.. automodule:: fitbit_downloader.download
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+fitbit\_downloader.download\_samples module
+-------------------------------------------
+
+.. automodule:: fitbit_downloader.download_samples
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+fitbit\_downloader.ext\_subprocess module
+-----------------------------------------
+
+.. automodule:: fitbit_downloader.ext_subprocess
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+fitbit\_downloader.gather\_keys\_oauth2 module
+----------------------------------------------
+
+.. automodule:: fitbit_downloader.gather_keys_oauth2
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+fitbit\_downloader.gen\_models module
+-------------------------------------
+
+.. automodule:: fitbit_downloader.gen_models
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+fitbit\_downloader.logger module
+--------------------------------
+
+.. automodule:: fitbit_downloader.logger
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+fitbit\_downloader.main module
+------------------------------
+
+.. automodule:: fitbit_downloader.main
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
