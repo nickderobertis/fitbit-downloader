@@ -27,7 +27,7 @@ jupyterlab = "*"
 cherrypy = "*"
 pydantic = {extras = ["dotenv"], version = "*"}
 datamodel-code-generator = "*"
-py-app-conf = "*"
+py-app-conf = ">=0.4.1"
 
 [pipenv]
 allow_prereleases = true
