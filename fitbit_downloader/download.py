@@ -8,6 +8,8 @@ from pydantic import BaseModel
 
 from fitbit_downloader.client import get_client
 from fitbit_downloader.config import Config, Dataset
+from fitbit_downloader.constants import DATE_FORMAT
+from fitbit_downloader.dateutils import yesterday
 from fitbit_downloader.logger import logger
 from fitbit_downloader.models.activityresponse import ActivityResponse
 from fitbit_downloader.models.distanceresponse import DistanceResponse
@@ -19,7 +21,7 @@ from fitbit_downloader.models.stepsresponse import StepsResponse
 
 
 def download_data(config: Config, custom_date: Optional[datetime.date] = None):
-    date = custom_date or _yesterday()
+    date = custom_date or yesterday()
     logger.info(f"Downloading data for {date}")
     client = get_client(config)
     fs = open_fs(config.download.fs_url)
@@ -76,7 +78,7 @@ def _get_out_path(dataset: Dataset, config: Config, date: datetime.date, fs: FS)
     out_folder = path.join(config.download.fs_folder, dataset.value)
     if not fs.exists(out_folder):
         fs.makedir(out_folder)
-    out_path = path.join(out_folder, date.strftime("%Y-%m-%d") + ".json")
+    out_path = path.join(out_folder, date.strftime(DATE_FORMAT) + ".json")
     return out_path
 
 
@@ -94,5 +96,3 @@ def _get_intraday_response_class(dataset: Dataset) -> Type[BaseModel]:
     raise NotImplementedError(f"need to add handling for intraday {dataset.value}")
 
 
-def _yesterday() -> datetime.date:
-    return datetime.date.today() - datetime.timedelta(days=1)
