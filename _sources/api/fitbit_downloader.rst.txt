@@ -24,6 +24,14 @@ fitbit\_downloader.authorize module
    :undoc-members:
    :show-inheritance:
 
+fitbit\_downloader.check\_upload module
+---------------------------------------
+
+.. automodule:: fitbit_downloader.check_upload
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 fitbit\_downloader.client module
 --------------------------------
 
@@ -36,6 +44,22 @@ fitbit\_downloader.config module
 --------------------------------
 
 .. automodule:: fitbit_downloader.config
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+fitbit\_downloader.constants module
+-----------------------------------
+
+.. automodule:: fitbit_downloader.constants
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+fitbit\_downloader.dateutils module
+-----------------------------------
+
+.. automodule:: fitbit_downloader.dateutils
    :members:
    :undoc-members:
    :show-inheritance:
