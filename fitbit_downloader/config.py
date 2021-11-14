@@ -45,6 +45,7 @@ class DownloadConfig(BaseModel):
     )
     fs_url: str = f"osfs://."
     fs_folder: str = "fitbit-data"
+    data_begin_date: datetime.date = datetime.date.today()
 
 
 class Config(BaseConfig):
@@ -72,4 +73,4 @@ class Config(BaseConfig):
 
 
 if __name__ == "__main__":
-    print(Config.load_recursive())
+    print(Config.load_recursive().to_toml())
