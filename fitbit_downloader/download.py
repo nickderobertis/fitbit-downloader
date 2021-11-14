@@ -1,5 +1,5 @@
 import datetime
-from typing import Optional, Type, Any
+from typing import Optional, Type, Any, Dict
 
 import fitbit
 from fs import open_fs, path
@@ -67,7 +67,7 @@ def _download_activity_data(
     _save(out_path, data, ActivityResponse, fs)
 
 
-def _save(out_path: str, data: dict[str, Any], response_cls: Type[BaseModel], fs: FS):
+def _save(out_path: str, data: Dict[str, Any], response_cls: Type[BaseModel], fs: FS):
     model = response_cls(**data)
     fs.writetext(out_path, model.json(indent=2))
 

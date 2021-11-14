@@ -1,4 +1,4 @@
-from typing import Any
+from typing import Any, Dict
 
 import fitbit
 
@@ -10,7 +10,7 @@ def get_client(config: Config) -> fitbit.Fitbit:
     if config.oauth_config is None:
         initial_client_authorization(config)
 
-    def on_refresh_token(raw_token_data: dict[str, Any]):
+    def on_refresh_token(raw_token_data: Dict[str, Any]):
         set_authorization(config, raw_token_data)
 
     oa: OAuthConfig = config.oauth_config  # type: ignore
