@@ -62,6 +62,7 @@ PACKAGE_INSTALL_REQUIRES = [
     # e.g.
     # 'package',
     # 'otherpackage>=1,<2'
+    "fitbit",
     "cherrypy",
     "pydantic[dotenv]",
     "py-app-conf>=0.4.1",
