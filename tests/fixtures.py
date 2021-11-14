@@ -10,5 +10,5 @@ def config() -> Config:
         client_id="a",
         client_secret="b",
         oauth_config=OAuthConfig(access_token="c", refresh_token="d", expires_at=123),
-        download=DownloadConfig(out_folder=GENERATED_PATH),
+        download=DownloadConfig(fs_url=str(GENERATED_PATH)),
     )
