@@ -41,7 +41,8 @@ class DownloadConfig(BaseModel):
             Dataset.ACTIVITIES,
         ]
     )
-    out_folder: Path = Path(__file__).parent.parent / "Data"
+    fs_url: str = f"osfs://."
+    fs_folder: str = "fitbit-data"
 
 
 class Config(BaseConfig):

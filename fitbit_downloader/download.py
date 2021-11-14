@@ -1,8 +1,9 @@
 import datetime
-from pathlib import Path
-from typing import Optional, Type, Any
+from typing import Optional, Type, Any, Dict
 
 import fitbit
+from fs import open_fs, path
+from fs.base import FS
 from pydantic import BaseModel
 
 from fitbit_downloader.client import get_client
@@ -21,8 +22,9 @@ def download_data(config: Config, custom_date: Optional[datetime.date] = None):
     date = custom_date or _yesterday()
     logger.info(f"Downloading data for {date}")
     client = get_client(config)
-    if not config.download.out_folder.exists():
-        config.download.out_folder.mkdir()
+    fs = open_fs(config.download.fs_url)
+    if not fs.exists(config.download.fs_folder):
+        fs.makedir(config.download.fs_folder)
     for dataset in config.download.datasets:
         logger.info(f"Downloading data for {dataset.value}")
         if dataset in (
@@ -32,49 +34,50 @@ def download_data(config: Config, custom_date: Optional[datetime.date] = None):
             Dataset.DISTANCE,
             Dataset.FLOORS,
         ):
-            _download_intraday_data(dataset, client, config, date)
+            _download_intraday_data(dataset, client, config, date, fs)
         elif dataset == Dataset.SLEEP:
-            _download_sleep_data(dataset, client, config, date)
+            _download_sleep_data(dataset, client, config, date, fs)
         elif dataset == Dataset.ACTIVITIES:
-            _download_activity_data(dataset, client, config, date)
+            _download_activity_data(dataset, client, config, date, fs)
 
 
 def _download_intraday_data(
-    dataset: Dataset, client: fitbit.Fitbit, config: Config, date: datetime.date
+    dataset: Dataset, client: fitbit.Fitbit, config: Config, date: datetime.date, fs: FS
 ):
     activity_str = f"activities/{dataset.value}"
     data = client.intraday_time_series(activity_str, base_date=date)
     response_cls = _get_intraday_response_class(dataset)
-    out_path = _get_out_path(dataset, config, date)
-    _save(out_path, data, response_cls)
+    out_path = _get_out_path(dataset, config, date, fs)
+    _save(out_path, data, response_cls, fs)
 
 
 def _download_sleep_data(
-    dataset: Dataset, client: fitbit.Fitbit, config: Config, date: datetime.date
+    dataset: Dataset, client: fitbit.Fitbit, config: Config, date: datetime.date, fs: FS
 ):
     data = client.get_sleep(date)
-    out_path = _get_out_path(dataset, config, date)
-    _save(out_path, data, SleepResponse)
+    out_path = _get_out_path(dataset, config, date, fs)
+    _save(out_path, data, SleepResponse, fs)
 
 
 def _download_activity_data(
-    dataset: Dataset, client: fitbit.Fitbit, config: Config, date: datetime.date
+    dataset: Dataset, client: fitbit.Fitbit, config: Config, date: datetime.date, fs: FS
 ):
     data = client.activities(date=date)  # type: ignore
-    out_path = _get_out_path(dataset, config, date)
-    _save(out_path, data, ActivityResponse)
+    out_path = _get_out_path(dataset, config, date, fs)
+    _save(out_path, data, ActivityResponse, fs)
 
 
-def _save(out_path: Path, data: dict[str, Any], response_cls: Type[BaseModel]):
+def _save(out_path: str, data: Dict[str, Any], response_cls: Type[BaseModel], fs: FS):
     model = response_cls(**data)
-    out_path.write_text(model.json(indent=2))
+    fs.writetext(out_path, model.json(indent=2))
 
 
-def _get_out_path(dataset: Dataset, config: Config, date: datetime.date) -> Path:
-    out_folder = config.download.out_folder / dataset.value
-    if not out_folder.exists():
-        out_folder.mkdir()
-    return out_folder / (date.strftime("%Y-%m-%d") + ".json")
+def _get_out_path(dataset: Dataset, config: Config, date: datetime.date, fs: FS) -> str:
+    out_folder = path.join(config.download.fs_folder, dataset.value)
+    if not fs.exists(out_folder):
+        fs.makedir(out_folder)
+    out_path = path.join(out_folder, date.strftime("%Y-%m-%d") + ".json")
+    return out_path
 
 
 def _get_intraday_response_class(dataset: Dataset) -> Type[BaseModel]:

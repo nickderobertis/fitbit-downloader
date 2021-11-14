@@ -1,5 +1,5 @@
 import datetime
-from typing import Any
+from typing import Any, Dict
 
 from fitbit_downloader.config import Config, OAuthConfig
 from fitbit_downloader.gather_keys_oauth2 import OAuth2Server
@@ -21,7 +21,7 @@ def initial_client_authorization(config: Config):
     set_authorization(config, server.fitbit.client.session.token)
 
 
-def set_authorization(config: Config, raw_token_data: dict[str, Any]):
+def set_authorization(config: Config, raw_token_data: Dict[str, Any]):
     token_data = RefreshTokenResponse(**raw_token_data)
     _update_config_with_token_data(config, token_data)
     logger.info(f"Token refreshed. New expiry: {config.oauth_config.expires_at_time}")  # type: ignore
