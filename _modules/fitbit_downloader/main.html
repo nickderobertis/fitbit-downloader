@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>fitbit_downloader.ext_subprocess &mdash; fitbit-downloader 0.1.1 documentation</title>
+  <title>fitbit_downloader.main &mdash; fitbit-downloader 0.1.1 documentation</title>
   
 
   
@@ -151,7 +151,7 @@
         
           <li><a href="../index.html">Module code</a> &raquo;</li>
         
-      <li>fitbit_downloader.ext_subprocess</li>
+      <li>fitbit_downloader.main</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -166,37 +166,18 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <h1>Source code for fitbit_downloader.ext_subprocess</h1><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">shlex</span>
-<span class="kn">import</span> <span class="nn">subprocess</span>
+  <h1>Source code for fitbit_downloader.main</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">fitbit_downloader.config</span> <span class="kn">import</span> <span class="n">Config</span>
+<span class="kn">from</span> <span class="nn">fitbit_downloader.download</span> <span class="kn">import</span> <span class="n">download_data</span>
 
 
-<span class="k">def</span> <span class="nf">_stream_process</span><span class="p">(</span><span class="n">process</span><span class="p">):</span>
-    <span class="n">go</span> <span class="o">=</span> <span class="n">process</span><span class="o">.</span><span class="n">poll</span><span class="p">()</span> <span class="ow">is</span> <span class="kc">None</span>
-    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">process</span><span class="o">.</span><span class="n">stdout</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf8&quot;</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">go</span>
+<div class="viewcode-block" id="main"><a class="viewcode-back" href="../../api/fitbit_downloader.html#fitbit_downloader.main.main">[docs]</a><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">config</span> <span class="o">=</span> <span class="n">Config</span><span class="o">.</span><span class="n">load_recursive</span><span class="p">()</span>
+    <span class="n">download_data</span><span class="p">(</span><span class="n">config</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="run_and_stream_output"><a class="viewcode-back" href="../../api/fitbit_downloader.html#fitbit_downloader.ext_subprocess.run_and_stream_output">[docs]</a><span class="k">def</span> <span class="nf">run_and_stream_output</span><span class="p">(</span><span class="n">command</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-    <span class="n">process</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span>
-        <span class="n">shlex</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">command</span><span class="p">),</span>
-        <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-        <span class="n">stdout</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span>
-        <span class="n">stderr</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">STDOUT</span><span class="p">,</span>
-    <span class="p">)</span>
-    <span class="k">while</span> <span class="n">_stream_process</span><span class="p">(</span><span class="n">process</span><span class="p">):</span>
-        <span class="k">pass</span></div>
-
-
-<div class="viewcode-block" id="run_then_show_output"><a class="viewcode-back" href="../../api/fitbit_downloader.html#fitbit_downloader.ext_subprocess.run_then_show_output">[docs]</a><span class="k">def</span> <span class="nf">run_then_show_output</span><span class="p">(</span><span class="n">command</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-    <span class="n">output</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
-        <span class="n">shlex</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">command</span><span class="p">),</span>
-        <span class="n">stdout</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span>
-        <span class="n">stderr</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">STDOUT</span><span class="p">,</span>
-        <span class="n">check</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">output</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf8&quot;</span><span class="p">))</span></div>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
 </pre></div>
 
            </div>

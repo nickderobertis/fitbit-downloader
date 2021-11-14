@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>fitbit_downloader.gather_keys_oauth2 &mdash; fitbit-downloader 0.1.0 documentation</title>
+  <title>fitbit_downloader.gather_keys_oauth2 &mdash; fitbit-downloader 0.1.1 documentation</title>
   
 
   
@@ -70,7 +70,7 @@
             
             
               <div class="version">
-                0.1.0
+                0.1.1
               </div>
             
           
@@ -224,7 +224,7 @@
 
         <span class="n">cherrypy</span><span class="o">.</span><span class="n">quickstart</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="OAuth2Server.index"><a class="viewcode-back" href="../../api/fitbit_downloader.html#fitbit_downloader.gather_keys_oauth2.OAuth2Server.index">[docs]</a>    <span class="nd">@cherrypy</span><span class="o">.</span><span class="n">expose</span>
+    <span class="nd">@cherrypy</span><span class="o">.</span><span class="n">expose</span>
     <span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">,</span> <span class="n">code</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">error</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Receive a Fitbit response containing a verification code. Use the code</span>
@@ -245,7 +245,7 @@
             <span class="n">error</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fmt_failure</span><span class="p">(</span><span class="s2">&quot;Unknown error while authenticating&quot;</span><span class="p">)</span>
         <span class="c1"># Use a thread to shutdown cherrypy so we can return HTML first</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_shutdown_cherrypy</span><span class="p">()</span>
-        <span class="k">return</span> <span class="n">error</span> <span class="k">if</span> <span class="n">error</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">success_html</span></div>
+        <span class="k">return</span> <span class="n">error</span> <span class="k">if</span> <span class="n">error</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">success_html</span>
 
     <span class="k">def</span> <span class="nf">_fmt_failure</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">):</span>
         <span class="n">tb</span> <span class="o">=</span> <span class="n">traceback</span><span class="o">.</span><span class="n">format_tb</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()[</span><span class="mi">2</span><span class="p">])</span>
