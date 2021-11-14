@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>fitbit_downloader.main &mdash; fitbit-downloader 0.1.3 documentation</title>
+  <title>fitbit_downloader.logger &mdash; fitbit-downloader 0.1.3 documentation</title>
   
 
   
@@ -151,7 +151,7 @@
         
           <li><a href="../index.html">Module code</a> &raquo;</li>
         
-      <li>fitbit_downloader.main</li>
+      <li>fitbit_downloader.logger</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -166,18 +166,42 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <h1>Source code for fitbit_downloader.main</h1><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">fitbit_downloader.config</span> <span class="kn">import</span> <span class="n">Config</span>
-<span class="kn">from</span> <span class="nn">fitbit_downloader.download</span> <span class="kn">import</span> <span class="n">download_data</span>
+  <h1>Source code for fitbit_downloader.logger</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Final</span>
+
+<span class="n">LOG_FOLDER</span><span class="p">:</span> <span class="n">Final</span><span class="p">[</span><span class="n">Path</span><span class="p">]</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span> <span class="o">/</span> <span class="s2">&quot;Logs&quot;</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">LOG_FOLDER</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+    <span class="n">LOG_FOLDER</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="main"><a class="viewcode-back" href="../../api/fitbit_downloader.html#fitbit_downloader.main.main">[docs]</a><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="n">config</span> <span class="o">=</span> <span class="n">Config</span><span class="o">.</span><span class="n">load_recursive</span><span class="p">()</span>
-    <span class="n">download_data</span><span class="p">(</span><span class="n">config</span><span class="p">)</span></div>
+<span class="k">def</span> <span class="nf">_get_log_path</span><span class="p">(</span><span class="n">folder</span><span class="p">:</span> <span class="n">Path</span> <span class="o">=</span> <span class="n">LOG_FOLDER</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Path</span><span class="p">:</span>
+    <span class="n">current_time</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">microsecond</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">current_time_str</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">current_time</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="s2">&quot;-&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">folder</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">current_time_str</span><span class="si">}</span><span class="s2">.log&quot;</span>
 
 
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">main</span><span class="p">()</span>
+<div class="viewcode-block" id="add_file_handler"><a class="viewcode-back" href="../../api/fitbit_downloader.html#fitbit_downloader.logger.add_file_handler">[docs]</a><span class="k">def</span> <span class="nf">add_file_handler</span><span class="p">():</span>
+    <span class="n">fh</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">FileHandler</span><span class="p">(</span><span class="n">_get_log_path</span><span class="p">())</span>
+    <span class="n">fh</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
+    <span class="n">fh</span><span class="o">.</span><span class="n">setFormatter</span><span class="p">(</span><span class="n">formatter</span><span class="p">)</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">fh</span><span class="p">)</span></div>
+
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&quot;fitbit-downloader&quot;</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
+<span class="n">formatter</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">Formatter</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%(asctime)s</span><span class="s2"> </span><span class="si">%(levelname)s</span><span class="s2">: </span><span class="si">%(message)s</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">ch</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">StreamHandler</span><span class="p">(</span><span class="n">stream</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+<span class="n">ch</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
+<span class="n">ch</span><span class="o">.</span><span class="n">setFormatter</span><span class="p">(</span><span class="n">formatter</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span>
+
+
 </pre></div>
 
            </div>

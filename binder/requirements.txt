@@ -1,6 +1,6 @@
-fs
-fitbit
-py-app-conf>=0.4.1
-pydantic[dotenv]
 cherrypy
+pydantic[dotenv]
+py-app-conf>=0.4.1
+fitbit
+fs
 fitbit-downloader
