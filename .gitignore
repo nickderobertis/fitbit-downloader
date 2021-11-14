@@ -70,3 +70,4 @@ fitbit-downloader.toml
 Notebooks
 .env
 Data
+tests/generated
