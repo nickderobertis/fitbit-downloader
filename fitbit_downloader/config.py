@@ -4,7 +4,9 @@ from pathlib import Path
 from typing import Final, Optional, List
 
 from pyappconf import BaseConfig, AppConfig, ConfigFormats
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, validator
+
+from fitbit_downloader.logger import add_file_handler
 
 APP_NAME: Final = "fitbit-downloader"
 
@@ -50,12 +52,19 @@ class Config(BaseConfig):
     client_secret: str
     oauth_config: Optional[OAuthConfig]
     download: DownloadConfig = DownloadConfig()
+    log_to_file: bool = False
 
     _settings = AppConfig(
         app_name=APP_NAME,
         default_format=ConfigFormats.TOML,
         config_name="fitbit-downloader",
     )
+
+    @validator("log_to_file", always=True)
+    def set_log_to_file(cls, v, values):
+        if v:
+            add_file_handler()
+        return v
 
     class Config:
         env_file = ".env"
