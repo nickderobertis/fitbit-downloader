@@ -16,6 +16,13 @@ def _get_log_path(folder: Path = LOG_FOLDER) -> Path:
     return folder / f"{current_time_str}.log"
 
 
+def add_file_handler():
+    fh = logging.FileHandler(_get_log_path())
+    fh.setLevel(logging.INFO)
+    fh.setFormatter(formatter)
+    logger.addHandler(fh)
+
+
 logger = logging.getLogger("fitbit-downloader")
 logger.setLevel(logging.INFO)
 formatter = logging.Formatter("%(asctime)s %(levelname)s: %(message)s")
@@ -25,7 +32,4 @@ ch.setLevel(logging.DEBUG)
 ch.setFormatter(formatter)
 logger.addHandler(ch)
 
-fh = logging.FileHandler(_get_log_path())
-fh.setLevel(logging.INFO)
-fh.setFormatter(formatter)
-logger.addHandler(fh)
+

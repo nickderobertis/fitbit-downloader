@@ -67,6 +67,7 @@ _examples
 **/.ipynb_checkpoints
 .vscode
 fitbit-downloader.toml
+fitbit-downloader.bak.toml
 Notebooks
 .env
 Data
