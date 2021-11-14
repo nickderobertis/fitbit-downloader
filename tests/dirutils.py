@@ -43,5 +43,6 @@ def assert_dir_trees_are_equal(dir1: Union[str, Path], dir2: Union[str, Path]):
 
 
 def reset_generated_path():
-    shutil.rmtree(GENERATED_PATH)
+    if GENERATED_PATH.exists():
+        shutil.rmtree(GENERATED_PATH)
     GENERATED_PATH.mkdir()
