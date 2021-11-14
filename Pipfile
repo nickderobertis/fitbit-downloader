@@ -29,7 +29,6 @@ pydantic = {extras = ["dotenv"], version = "*"}
 datamodel-code-generator = "*"
 py-app-conf = ">=0.4.1"
 fs = "*"
-fs-s3fs = "*"
 freezegun = "*"
 
 [pipenv]

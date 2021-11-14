@@ -62,6 +62,10 @@ PACKAGE_INSTALL_REQUIRES = [
     # e.g.
     # 'package',
     # 'otherpackage>=1,<2'
+    "cherrypy",
+    "pydantic[dotenv]",
+    "py-app-conf>=0.4.1",
+    "fs",
 ]
 
 # Add any third party packages you use in requirements for optional features of your package here
