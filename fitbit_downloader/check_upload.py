@@ -6,7 +6,7 @@ from fitbit_downloader.config import Config, Dataset
 from fitbit_downloader.constants import DATE_FORMAT
 
 
-def last_full_upload(config: Config) -> datetime.date:
+def begin_date_based_on_config_and_last_full_upload(config: Config) -> datetime.date:
     fs = open_fs(config.download.fs_url)
     if not fs.exists(config.download.fs_folder):
         # No existing data at all, start from begin date
@@ -15,7 +15,9 @@ def last_full_upload(config: Config) -> datetime.date:
     if not dates:
         # Folder existed but no downloaded data, start from begin date
         return config.download.data_begin_date
-    return min(dates)
+    last_downloaded = min(dates)
+    # If last downloaded is before begin date, use begin date
+    return max(last_downloaded, config.download.data_begin_date)
 
 
 def _last_uploaded(dataset: Dataset, config: Config) -> datetime.date:
