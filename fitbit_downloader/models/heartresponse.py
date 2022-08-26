@@ -4,7 +4,7 @@
 
 from __future__ import annotations
 
-from typing import List
+from typing import List, Optional
 
 from pydantic import BaseModel, Field
 
@@ -20,7 +20,8 @@ class HeartRateZone(BaseModel):
 class Value(BaseModel):
     customHeartRateZones: List
     heartRateZones: List[HeartRateZone]
-    restingHeartRate: int
+    # TODO: Set this to optional dynamically
+    restingHeartRate: Optional[int]
 
 
 class ActivitiesHeartItem(BaseModel):

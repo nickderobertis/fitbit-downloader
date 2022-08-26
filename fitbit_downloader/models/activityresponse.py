@@ -4,7 +4,7 @@
 
 from __future__ import annotations
 
-from typing import List
+from typing import List, Optional
 
 from pydantic import BaseModel
 
@@ -57,10 +57,12 @@ class Summary(BaseModel):
     elevation: int
     fairlyActiveMinutes: int
     floors: int
-    heartRateZones: List[HeartRateZone]
+    # TODO: Set this to optional dynamically
+    heartRateZones: Optional[List[HeartRateZone]]
     lightlyActiveMinutes: int
     marginalCalories: int
-    restingHeartRate: int
+    # TODO: Set this to optional dynamically
+    restingHeartRate: Optional[int]
     sedentaryMinutes: int
     steps: int
     veryActiveMinutes: int

@@ -66,6 +66,11 @@ with the responses.
 
 ### Generate Response Models
 
+> Note: There are currently some manual modifications to the generated files. 
+> They are all marked with TODO so that we can work them into the generation.
+> If you re-run the generation, you will need to manually update the files 
+> to make the same changes.
+
 Run `python -m fitbit_downloader.gen_models` to output response models 
 in `fitbit_downloader.models` from the sample responses.
 
