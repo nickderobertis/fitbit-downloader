@@ -65,7 +65,9 @@ docs
 docsrc/source/auto_examples
 _examples
 **/.ipynb_checkpoints
-.vscode
+venvs/
+node_modules
+scripts/bin/
 fitbit-downloader.toml
 fitbit-downloader.bak.toml
 Notebooks
