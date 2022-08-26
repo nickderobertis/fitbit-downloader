@@ -2,7 +2,7 @@ import datetime
 
 from fs import open_fs, path
 
-from fitbit_downloader.config import Dataset, Config
+from fitbit_downloader.config import Config, Dataset
 from fitbit_downloader.constants import DATE_FORMAT
 
 

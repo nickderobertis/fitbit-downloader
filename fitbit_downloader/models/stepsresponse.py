@@ -26,7 +26,7 @@ class ActivitiesStepsIntraday(BaseModel):
 
 
 class StepsResponse(BaseModel):
-    activities_steps: List[ActivitiesStep] = Field(..., alias='activities-steps')
+    activities_steps: List[ActivitiesStep] = Field(..., alias="activities-steps")
     activities_steps_intraday: ActivitiesStepsIntraday = Field(
-        ..., alias='activities-steps-intraday'
+        ..., alias="activities-steps-intraday"
     )

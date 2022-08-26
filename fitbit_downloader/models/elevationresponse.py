@@ -27,8 +27,8 @@ class ActivitiesElevationIntraday(BaseModel):
 
 class ElevationResponse(BaseModel):
     activities_elevation: List[ActivitiesElevationItem] = Field(
-        ..., alias='activities-elevation'
+        ..., alias="activities-elevation"
     )
     activities_elevation_intraday: ActivitiesElevationIntraday = Field(
-        ..., alias='activities-elevation-intraday'
+        ..., alias="activities-elevation-intraday"
     )

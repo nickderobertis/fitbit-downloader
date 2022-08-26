@@ -40,7 +40,7 @@ class ActivitiesHeartIntraday(BaseModel):
 
 
 class HeartResponse(BaseModel):
-    activities_heart: List[ActivitiesHeartItem] = Field(..., alias='activities-heart')
+    activities_heart: List[ActivitiesHeartItem] = Field(..., alias="activities-heart")
     activities_heart_intraday: ActivitiesHeartIntraday = Field(
-        ..., alias='activities-heart-intraday'
+        ..., alias="activities-heart-intraday"
     )

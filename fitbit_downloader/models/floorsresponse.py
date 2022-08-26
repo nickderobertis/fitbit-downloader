@@ -26,7 +26,7 @@ class ActivitiesFloorsIntraday(BaseModel):
 
 
 class FloorsResponse(BaseModel):
-    activities_floors: List[ActivitiesFloor] = Field(..., alias='activities-floors')
+    activities_floors: List[ActivitiesFloor] = Field(..., alias="activities-floors")
     activities_floors_intraday: ActivitiesFloorsIntraday = Field(
-        ..., alias='activities-floors-intraday'
+        ..., alias="activities-floors-intraday"
     )

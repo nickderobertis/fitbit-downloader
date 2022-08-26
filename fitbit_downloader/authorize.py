@@ -1,4 +1,3 @@
-import datetime
 from typing import Any, Dict
 
 from fitbit_downloader.config import Config, OAuthConfig

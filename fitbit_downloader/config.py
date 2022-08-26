@@ -1,9 +1,8 @@
 import datetime
 from enum import Enum
-from pathlib import Path
-from typing import Final, Optional, List
+from typing import Final, List, Optional
 
-from pyappconf import BaseConfig, AppConfig, ConfigFormats
+from pyappconf import AppConfig, BaseConfig, ConfigFormats
 from pydantic import BaseModel, Field, validator
 
 from fitbit_downloader.logger import add_file_handler

@@ -1,5 +1,5 @@
 import datetime
-from typing import Optional, Type, Any, Dict
+from typing import Any, Dict, Optional, Type
 
 import fitbit
 from fs import open_fs, path
@@ -94,5 +94,3 @@ def _get_intraday_response_class(dataset: Dataset) -> Type[BaseModel]:
     if dataset == Dataset.FLOORS:
         return FloorsResponse
     raise NotImplementedError(f"need to add handling for intraday {dataset.value}")
-
-

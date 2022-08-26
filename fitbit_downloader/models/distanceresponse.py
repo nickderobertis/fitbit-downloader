@@ -27,8 +27,8 @@ class ActivitiesDistanceIntraday(BaseModel):
 
 class DistanceResponse(BaseModel):
     activities_distance: List[ActivitiesDistanceItem] = Field(
-        ..., alias='activities-distance'
+        ..., alias="activities-distance"
     )
     activities_distance_intraday: ActivitiesDistanceIntraday = Field(
-        ..., alias='activities-distance-intraday'
+        ..., alias="activities-distance-intraday"
     )

@@ -2,7 +2,7 @@ from typing import Any, Dict
 
 import fitbit
 
-from fitbit_downloader.authorize import set_authorization, initial_client_authorization
+from fitbit_downloader.authorize import initial_client_authorization, set_authorization
 from fitbit_downloader.config import Config, OAuthConfig
 
 

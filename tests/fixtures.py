@@ -1,6 +1,6 @@
 import pytest
 
-from fitbit_downloader.config import Config, OAuthConfig, DownloadConfig
+from fitbit_downloader.config import Config, DownloadConfig, OAuthConfig
 from tests.config import GENERATED_PATH
 
 

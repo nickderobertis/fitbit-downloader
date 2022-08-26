@@ -4,7 +4,7 @@ from freezegun import freeze_time
 
 from fitbit_downloader.config import Config
 from fitbit_downloader.download import download_data
-from tests.config import GENERATED_PATH, DOWNLOAD_INPUT_PATH
+from tests.config import DOWNLOAD_INPUT_PATH, GENERATED_PATH
 from tests.dirutils import assert_dir_trees_are_equal, reset_generated_path
 from tests.fake_client import FakeFitbit
 
